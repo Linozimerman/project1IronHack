@@ -1,0 +1,96 @@
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #838383;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+.item0-0{
+    grid-area: cerocero;
+    width: 150px;
+}
+
+.item0-1{
+    grid-area: cerouno;
+    width: 150px;
+}
+
+.item1-0{
+    grid-area: unocero;
+    width: 150px;
+}
+
+.item1-1{  
+    grid-area: unouno;
+    width: 150px;
+}
+
+
+
+
+#div-boardGame{
+    background-color: #aba8a8;
+    width: 80vw;
+    height: 80vh;
+/*     display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+ */
+    display: grid;
+    grid-template:
+    [row1-start] "cerocero cerouno" 150px [row1-end]
+    [row2-start] "unocero unouno" 150px [row2-end];
+    column-gap: 50px;
+    row-gap: 50px;
+    justify-items: center;
+    justify-content: center; 
+
+
+
+}
+
+
+
+
+
+
+
+.spacesWindows{
+    background-color: aquamarine;
+    border: solid, 4px, black ;
+    border-radius: 5px;
+/*     width: 100px;
+    height: 100px; */
+}
+
+
+.playerClass{
+    background-color: blue;
+}
+
+.enemyClass{
+    background-color: red;
+}
+
+.peopleClass{
+    background-color: green;
+}
+
+.nothingClass{
+    background-color: black;
+}
+
+
+
