@@ -1,28 +1,43 @@
 const playerElement = document.querySelector("#div-player")
 const gameBoardElement = document.querySelector('#div-boardGame')
 
+
 class Player {
-    constructor (position, health, playerElement, gameBoardElement){
-        this.position;
-        this.health;
+    constructor (playerPosition,  gameBoardArray, playerElement){
+        this.playerPosition = playerPosition;
+        this.rowIndex = playerPosition[0];
+        this.columnIndex = playerPosition[1];
+        this.health = 100;
         this.playerElement = playerElement;
-        this.gameBoardElement = gameBoardElement;
+        this.gameBoardArray = gameBoardArray;
     }
 
-    movePlayer(){
-
+    movePlayer(event){
+        
+        if (event.key == "ArrowUp" && this.rowIndex === 0 ){
+            this.rowIndex --;
+        } else if (event.key === "ArrowDown" && this.rowIndex< gameBoardArray.length - 1){
+            this.rowIndex ++;
+        } else if (event.key === "ArrowRight" && this.columnIndex < gameBoardArray[0].length - 1){
+            this.columnIndex++;
+        } else if (event.key === "ArrowLeft" && this.columnIndex === 0){
+            this.columnIndex--;
+        }
+        this.playerPosition= [this.rowIndex, this.columnIndex]
     }
     
-    oneUp(){
-
+    // anadir un metodo para actualizar el gameboard (debe recibir el gameboard como argumento)
+    updatePPosition(){
+        
     }
 }
 
 
 class Game {
-    constructor (gameOver,score){
+    constructor (gameBoardArray){
     this.gameOver = false;
-    this.score = 0
+    this.score = 0;
+    this.gameBoardArray = [[],[]];
     }
 }
 
