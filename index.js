@@ -1,12 +1,4 @@
-/* const divClassWindows = document.querySelector("#spacesWindows")
-const div00 = document.querySelector(".item0-0")
-const div01 = document.querySelector(".item0-1")
-const div10 = document.querySelector(".item1-0")
-const div11 = document.querySelector(".item1-1") 
-const boardGameElement = document.querySelector("#div-boardGame")
-const items = document.querySelector(".item")
-//const dinamicSelector = document.querySelector(`.item-${element}-${innerelement}`)
-*/
+
 
 
 
@@ -15,7 +7,7 @@ const items = document.querySelector(".item")
 let g1 = new Game()
 let p1 = new Player () 
 let e1 = new Enemy ()
-
+let pp1 = new People ()
 
 function boardChecker(){
 p1.dinamicArray.forEach((element, rowIndex) => {
@@ -58,13 +50,22 @@ p1.dinamicArray.forEach((element, rowIndex) => {
 function addEnemyAfterTime() {
 setTimeout(()=>{
 e1.addEnemy(p1.dinamicArray)
-console.log(e1.enemyPosition);
+console.log(pp1.enemyPosition);
 boardChecker();
 addEnemyAfterTime();
 }, 1000);
 }
-
 addEnemyAfterTime();
+
+function addPeopleAfterTime() {
+    setTimeout(()=>{
+    pp1.addPeople(p1.dinamicArray)
+    console.log(e1.enemyPosition);
+    boardChecker();
+    addPeopleAfterTime();
+    }, 4000);
+    }
+    addPeopleAfterTime();
 
 document.addEventListener("keydown", (event) => {
     console.log("key pressed:", event.key)
@@ -72,6 +73,5 @@ document.addEventListener("keydown", (event) => {
     boardChecker()
     
     
-
 });
 
