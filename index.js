@@ -9,15 +9,12 @@ const items = document.querySelector(".item")
 */
 
 
-/* let gameBoardArray = [
-    [0,0],
-    [0,0]
-]  */
+
 
 
 let g1 = new Game()
 let p1 = new Player () 
-// Actualiza gameboard segun la variable gameBoardArray
+let e1 = new Enemy ()
 
 // updateClasses
 
@@ -46,6 +43,10 @@ document.addEventListener("keydown", (event) => {
             
         });
     });
+    e1.addEnemy();
+
+
+
 
 });
 
