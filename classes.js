@@ -9,9 +9,11 @@ class Player {
         this.columnIndex = this.playerPosition[1];
         this.health = 100;
         this.dinamicArray = [
-            [0,0,0],
-            [0,0,0],
-            [0,0,0]
+            [0,0,0,0,0],
+            [0,0,0,0,0],
+            [0,0,0,0,0],
+            [0,0,0,0,0],
+            [0,0,0,0,0]
         ]
     }
 
@@ -56,8 +58,8 @@ class Game {
         
     }
     randomPosition(){
-        this.enemyPosition[0] = Math.floor(Math.random() * 3);
-        this.enemyPosition[1] = Math.floor(Math.random() * 3);
+        this.enemyPosition[0] = Math.floor(Math.random() * 5);
+        this.enemyPosition[1] = Math.floor(Math.random() * 5);
         this.enemyRowIndex = this.enemyPosition[0];
         this.enemyColumnIndex = this.enemyPosition[1];
 
