@@ -1,47 +1,48 @@
-const playerElement = document.querySelector("#div-player")
-const gameBoardElement = document.querySelector('#div-boardGame')
+//const playerElement = document.querySelector("#div-player")
+//const gameBoardElement = document.querySelector('#div-boardGame')
 
 
 class Player {
-    constructor (playerPosition,  gameBoardArray, playerElement){
+    constructor (playerPosition,  gameBoardArray){
         this.playerPosition = playerPosition;
         this.rowIndex = playerPosition[0];
         this.columnIndex = playerPosition[1];
         this.health = 100;
-        this.playerElement = playerElement;
-        this.gameBoardArray = gameBoardArray;
+        this.gameBoardArray = [
+            [0,0],
+            [1,0]
+        ];
     }
 
     movePlayer(event){
-        
         if (event.key == "ArrowUp" && this.rowIndex === 0 ){
             this.rowIndex --;
-        } else if (event.key === "ArrowDown" && this.rowIndex< gameBoardArray.length - 1){
+        } else if (event.key === "ArrowDown" && this.rowIndex < this.gameBoardArray.length - 1){
             this.rowIndex ++;
-        } else if (event.key === "ArrowRight" && this.columnIndex < gameBoardArray[0].length - 1){
+        } else if (event.key === "ArrowRight" && this.columnIndex < this.gameBoardArray[0].length - 1){
             this.columnIndex++;
         } else if (event.key === "ArrowLeft" && this.columnIndex === 0){
             this.columnIndex--;
         }
         this.playerPosition= [this.rowIndex, this.columnIndex]
     }
-    
-    // anadir un metodo para actualizar el gameboard (debe recibir el gameboard como argumento)
-    updatePPosition(){
-        
+    updateGame(playerPosition){
+        this.gameBoardArray = 
     }
 }
+
+
 
 
 class Game {
-    constructor (gameBoardArray){
+    constructor (){
     this.gameOver = false;
     this.score = 0;
-    this.gameBoardArray = [[],[]];
     }
 }
 
-class Enemy {
+
+/* class Enemy {
     constructor (position){
     this.position;
     }
@@ -49,9 +50,9 @@ class Enemy {
     addEnemy(){
 
     }
-}
+} */
 
-class Friend{
+/* class Friend{
     constructor(position){
     this.position;
     }
@@ -59,4 +60,4 @@ class Friend{
     addPeople(){
 
     }
-}
+} */
