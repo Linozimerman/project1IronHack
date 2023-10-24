@@ -22,22 +22,22 @@ p1.dinamicArray.forEach((element, rowIndex) => {
             dinamicSelector.classList.remove("enemyClass");
             dinamicSelector.classList.remove("peopleClass");
         } else if(innerElement === 1){
-            dinamicSelector.classList.add("playerClass");
             dinamicSelector.classList.remove("nothingClass")
+            dinamicSelector.classList.add("playerClass");
             dinamicSelector.classList.remove("enemyClass")
             dinamicSelector.classList.remove("peopleClass")
             // p1.playerPosition = [rowIndex,columnIndex];
             //console.log('el jugador esta en',p1.playerPosition);
         } else if (innerElement === 2){
-            dinamicSelector.classList.add("enemyClass")
-            dinamicSelector.classList.remove("playerClass")
             dinamicSelector.classList.remove("nothingClass")
+            dinamicSelector.classList.remove("playerClass")
+            dinamicSelector.classList.add("enemyClass")
             dinamicSelector.classList.remove("peopleClass")
         } else if (innerElement === 3){
-            dinamicSelector.classList.add("peopleClass")
-            dinamicSelector.classList.remove("playerClass")
             dinamicSelector.classList.remove("nothingClass")
+            dinamicSelector.classList.remove("playerClass")
             dinamicSelector.classList.remove("enemyClass")
+            dinamicSelector.classList.add("peopleClass")
         }
         
     });

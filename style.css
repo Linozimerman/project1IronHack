@@ -15,144 +15,146 @@ body{
 
 
 
+
+
 .item0-0{
     grid-area: cerocero;
-    width: 80px;
+    width: 90px;
     height: 80px;
 }
 .item0-1{
     grid-area: cerouno;
-    width: 80px;
+    width: 90px;
     height: 80px;
 }
 .item0-2{
     grid-area: cerodos;
-    width: 80px;
+    width: 90px;
     height: 80px;
 }
 .item0-3{
     grid-area: cerotres;
-    width: 80px;
+    width: 90px;
     height: 80px;
 }
 .item0-4{
     grid-area: cerocuatro;
-    width: 80px;
+    width: 90px;
     height: 80px;
 }
 
 
 .item1-0{
     grid-area: unocero;
-    width: 80px;
+    width: 90px;
     height: 80px;
 }
 .item1-1{  
     grid-area: unouno;
-    width: 80px;
+    width: 90px;
     height: 80px;
 }
 .item1-2{  
     grid-area: unodos;
-    width: 80px;
+    width: 90px;
     height: 80px;
 }
 .item1-3{  
     grid-area: unotres;
-    width: 80px;
+    width: 90px;
     height: 80px;
 }
 .item1-4{  
     grid-area: unocuatro;
-    width: 80px;
+    width: 90px;
     height: 80px;
 }
 
 
 .item2-0{
     grid-area: doscero;
-    width: 80px;
+    width: 90px;
     height: 80px;
 }
 .item2-1{  
     grid-area: dosuno;
-    width: 80px;
+    width: 90px;
     height: 80px;
 }
 .item2-2{  
     grid-area: dosdos;
-    width: 80px;
+    width: 90px;
     height: 80px;
 }
 .item2-3{  
     grid-area: dostres;
-    width: 80px;
+    width: 90px;
     height: 80px;
 }
 .item2-4{  
     grid-area: doscuatro;
-    width: 80px;
+    width: 90px;
     height: 80px;
 }
 
 
 .item3-0{
     grid-area: trescero;
-    width: 80px;
+    width: 90px;
     height: 80px;
 }
 .item3-1{  
     grid-area: tresuno;
-    width: 80px;
+    width: 90px;
     height: 80px;
 }
 .item3-2{  
     grid-area: tresdos;
-    width: 80px;
+    width: 90px;
     height: 80px;
 }
 .item3-3{  
     grid-area: trestres;
-    width: 80px;
+    width: 90px;
     height: 80px;
 }
 .item3-4{  
     grid-area: trescuatro;
-    width: 80px;
+    width: 90px;
     height: 80px;
 }
 
 
 .item4-0{
     grid-area: cuatrocero;
-    width: 80px;
+    width: 90px;
     height: 80px;
 }
 .item4-1{  
     grid-area: cuatrouno;
-    width: 80px;
+    width: 90px;
     height: 80px;
 }
 .item4-2{  
     grid-area: cuatrodos;
-    width: 80px;
+    width: 90px;
     height: 80px;
 }
 .item4-3{  
     grid-area: cuatrotres;
-    width: 80px;
+    width: 90px;
     height: 80px;
 }
 .item4-4{  
     grid-area: cuatrocuatro;
-    width: 80px;
+    width: 90px;
     height: 80px;
 }
 
 
 #div-boardGame{
     background-color: #aba8a8;
-    width: 95vw;
+    width: 700px;
     height: 95vh;
     display: grid;
     grid-template:
@@ -161,8 +163,8 @@ body{
     [row3-start] "doscero dosuno dosdos dostres doscuatro" 150px [row3-end]  
     [row4-start] "trescero tresuno tresdos trestres trescuatro" 150px [row4-end]  
     [row5-start] "cuatrocero cuatrouno cuatrodos cuatrotres cuatrocuatro" 150px [row5-end];  
-    column-gap: 50px;
-    row-gap: 50px;
+    column-gap: 40px;
+    row-gap: 40px;
     justify-items: center;
     justify-content: center; 
 
@@ -188,11 +190,17 @@ body{
 }
 
 .enemyClass{
-    background-color: red;
+    background-color: rgba(56, 29, 29, 0.681);
+    background-image: url('./img/transparentfire.gif');
+    background-size: cover; 
+    background-position: center center;
 }
 
 .peopleClass{
-    background-color: green;
+    background-color: rgb(143, 42, 42);;
+    background-image: url('./img/FireVictim2.gif');
+    background-size: cover; 
+    background-position: center center;
 }
 
 .nothingClass{

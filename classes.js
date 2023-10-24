@@ -41,7 +41,7 @@ class Player {
 class Game {
     constructor (){
     this.gameOver = false;
-    this.score = 0;
+    this.score = 4;
     }
 }
 
