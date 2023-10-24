@@ -1,7 +1,8 @@
-#  Hopper
+#  Fire Hopper
 
-Some bad guys are attacking the hotel, they lit fires in some rooms and are throwing stuff at the people.
-You are the good guy that knows how to jump from balcony to balcony, and you are going to save everyone from death.
+Alert, Alert!
+A fire broke out in the hotel, and you are the only firefighter capable of jumping from balcony to balcony.
+Extinguish all the fire outbreaks and save everyone!
 
 
 
@@ -12,9 +13,9 @@ You are the good guy that knows how to jump from balcony to balcony, and you are
 ![Screenshot]: (https://excalidraw.com/#json=UPPDbEzzUAwD-Ahf2uOXM,oW28XWpvn-rarhSD1SxqzA)
 
 
-The idea is to create a game. In the game the user will be a player that hops from balcony to balcony, saving people and avoiding danger.
+The idea is to create a game. In the game the user will be a player that hops from balcony to balcony, saving people and extinguishing fire.
 
-The player will have 5 stars, they are lives. Each time some danger or enemy hits our player it looses one star and when it looses all of them its Game Over and the game is stoped.
+The player will have 5 stars, they are lives. Each time some inocent is burnt alive our player it looses one star and when it looses all of them its Game Over and the game is stoped.
 
 
 
