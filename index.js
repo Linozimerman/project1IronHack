@@ -14,51 +14,38 @@ const items = document.querySelector(".item")
     [0,0]
 ]  */
 
-let cerocero = 0;
-let unocero = 0;
-let cerouno = 0;
-let unouno = 0
-
-
-dinamicArray = [
-    [cerocero,unocero],
-    [cerouno,unouno]
-]
-
 
 let g1 = new Game()
-let p1 = new Player ([0,1]) 
+let p1 = new Player () 
 // Actualiza gameboard segun la variable gameBoardArray
 
-
-p1.gameBoardArray.forEach((element, rowIndex) => {
-    //console.log("First console","element:",element, "rowIndex:",rowIndex)
-    element.forEach((innerElement, columnIndex) =>{
-        //console.log("Second console innerElement:",innerElement, "columnIndex:", columnIndex)
-        const dinamicSelector = document.querySelector(`.item${rowIndex}\\-${columnIndex}`)
-        //console.log("Este es el dinamicSelector:", dinamicSelector);
-        if(innerElement === 0){
-            dinamicSelector.classList.add("nothingClass")
-        } else if(innerElement === 1){
-            dinamicSelector.classList.add("playerClass");
-            p1.playerPosition = [rowIndex,columnIndex];
-            //console.log('el jugador esta en',p1.playerPosition);
-        } else if (innerElement === 2){
-            dinamicSelector.classList.add("enemyClass")
-        } else if (innerElement === 3){
-            dinamicSelector.classList.add("peopleClass")
-        }
-        
-    });
-});
+// updateClasses
 
 document.addEventListener("keydown", (event) => {
     console.log("key pressed:", event.key)
     p1.movePlayer(event);
-    p1.updateGame()
-    
-    
-
+    p1.dinamicArray.forEach((element, rowIndex) => {
+        //console.log("First console","element:",element, "rowIndex:",rowIndex)
+        element.forEach((innerElement, columnIndex) =>{
+            //console.log("Second console innerElement:",innerElement, "columnIndex:", columnIndex)
+            const dinamicSelector = document.querySelector(`.item${rowIndex}\\-${columnIndex}`)
+            //console.log("Este es el dinamicSelector:", dinamicSelector);
+            if(innerElement === 0){
+                dinamicSelector.classList.add("nothingClass")
+                dinamicSelector.classList.remove("playerClass");
+            } else if(innerElement === 1){
+                dinamicSelector.classList.add("playerClass");
+                dinamicSelector.classList.remove("nothingClass")
+                // p1.playerPosition = [rowIndex,columnIndex];
+                //console.log('el jugador esta en',p1.playerPosition);
+            } else if (innerElement === 2){
+                dinamicSelector.classList.add("enemyClass")
+            } else if (innerElement === 3){
+                dinamicSelector.classList.add("peopleClass")
+            }
+            
+        });
+    });
 
 });
 

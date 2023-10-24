@@ -3,31 +3,41 @@
 
 
 class Player {
-    constructor (playerPosition,  gameBoardArray){
-        this.playerPosition = playerPosition;
-        this.rowIndex = playerPosition[0];
-        this.columnIndex = playerPosition[1];
+    constructor (){
+        this.playerPosition = [1,1];
+        this.rowIndex = this.playerPosition[0];
+        this.columnIndex = this.playerPosition[1];
         this.health = 100;
-        this.gameBoardArray = [
-            [0,0],
-            [1,0]
-        ];
+        this.cerocero = 0;
+        this.unocero = 0;
+        this.cerouno = 0;
+        this.unouno = 1;
+        this.dinamicArray = [
+            [this.cerocero,this.unocero],
+            [this.cerouno,this.unouno]
+            ]
     }
 
     movePlayer(event){
-        if (event.key == "ArrowUp" && this.rowIndex === 0 ){
+        console.log("are we here?");
+        console.log("ARRAY: ",this.dinamicArray);
+        this.dinamicArray[this.rowIndex][this.columnIndex] = 0
+        if (event.key == "ArrowUp"  && this.rowIndex !== 0   ){
             this.rowIndex --;
-        } else if (event.key === "ArrowDown" && this.rowIndex < this.gameBoardArray.length - 1){
+            console.log("Row index: ", this.rowIndex);
+        } else if (event.key === "ArrowDown" && this.rowIndex < this.dinamicArray.length - 1 ){
             this.rowIndex ++;
-        } else if (event.key === "ArrowRight" && this.columnIndex < this.gameBoardArray[0].length - 1){
+        } else if (event.key === "ArrowRight" /* && this.columnIndex < this.dinamicArray[0].length - 1 */){
             this.columnIndex++;
-        } else if (event.key === "ArrowLeft" && this.columnIndex === 0){
+        } else if (event.key === "ArrowLeft" /* && this.columnIndex === 0 */){
             this.columnIndex--;
         }
-        this.playerPosition= [this.rowIndex, this.columnIndex]
+        this.playerPosition = [this.rowIndex, this.columnIndex]
+        this.dinamicArray[this.rowIndex][this.columnIndex] = 1
+        console.log("PLAYER POSITION: ", this.playerPosition);
     }
-    updateGame(playerPosition){
-        this.gameBoardArray = 
+    updateGame(dinamicArray){
+        playerPosition[this.rowIndex][this.columnIndex] = 1
     }
 }
 
