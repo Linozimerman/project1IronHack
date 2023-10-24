@@ -1,7 +1,6 @@
 //const playerElement = document.querySelector("#div-player")
 //const gameBoardElement = document.querySelector('#div-boardGame')
-const randomRowIndex = Math.floor(Math.random() * 3);
-const randomColumnIndex = Math.floor(Math.random() * 3);
+
 
 class Player {
     constructor (){
@@ -34,7 +33,7 @@ class Player {
         this.dinamicArray[this.rowIndex][this.columnIndex] = 1
         //console.log("PLAYER POSITION: ", this.playerPosition);
     }
-    updateGame(dinamicArray){
+    updateGame(){
         playerPosition[this.rowIndex][this.columnIndex] = 1
     }
 }
@@ -50,14 +49,26 @@ class Game {
 
  class Enemy {
     constructor (){
-        this.enemy; 
-        this.enemyPosition = [0,2]
+        //this.enemy; 
+        this.enemyPosition = [0,0]
         this.enemyRowIndex = this.enemyPosition[0];
         this.enemyColumnIndex = this.enemyPosition[1];
+        
     }
-    addEnemy(){
-        this.player.dinamicArray[this.enemyRowIndex][this.enemyColumnIndex] = 2
+    randomPosition(){
+        this.enemyPosition[0] = Math.floor(Math.random() * 3);
+        this.enemyPosition[1] = Math.floor(Math.random() * 3);
+        this.enemyRowIndex = this.enemyPosition[0];
+        this.enemyColumnIndex = this.enemyPosition[1];
+
+
     }
+    addEnemy(dinamicArray){
+        this.randomPosition();
+        dinamicArray[this.enemyRowIndex][this.enemyColumnIndex] = 2
+        
+    }
+
 } 
 
 /* class People{
