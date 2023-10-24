@@ -13,8 +13,8 @@ class Player {
         this.cerouno = 0;
         this.unouno = 1;
         this.dinamicArray = [
-            [this.cerocero,this.unocero],
-            [this.cerouno,this.unouno]
+            [this.cerocero,this.cerouno],
+            [this.unocero,this.unouno]
             ]
     }
 
@@ -27,9 +27,9 @@ class Player {
             console.log("Row index: ", this.rowIndex);
         } else if (event.key === "ArrowDown" && this.rowIndex < this.dinamicArray.length - 1 ){
             this.rowIndex ++;
-        } else if (event.key === "ArrowRight" /* && this.columnIndex < this.dinamicArray[0].length - 1 */){
+        } else if (event.key === "ArrowRight"  && this.columnIndex < this.dinamicArray[0].length - 1 ){
             this.columnIndex++;
-        } else if (event.key === "ArrowLeft" /* && this.columnIndex === 0 */){
+        } else if (event.key === "ArrowLeft"   && this.columnIndex > 0  ){
             this.columnIndex--;
         }
         this.playerPosition = [this.rowIndex, this.columnIndex]
