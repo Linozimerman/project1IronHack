@@ -61,7 +61,7 @@ addEnemyAfterTime();
 function addPeopleAfterTime() {
     setTimeout(()=>{
     pp1.addPeople(p1.dinamicArray)
-    console.log(e1.enemyPosition);
+    //console.log(e1.enemyPosition);
     boardChecker();
     addPeopleAfterTime();
     }, 4000);

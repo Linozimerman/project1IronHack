@@ -19,23 +19,28 @@ class Player {
     movePlayer(event){
         //console.log("are we here?");
         //console.log("ARRAY: ",this.dinamicArray);
-        this.score ++;
-        this.scorePlayer.innerText = this.score;
+        
+        
         
         this.dinamicArray[this.rowIndex][this.columnIndex] = 0
         if (event.key == "ArrowUp"  && this.rowIndex !== 0   ){
             this.rowIndex --;
+            this.score ++;
             //console.log("Row index: ", this.rowIndex);
         } else if (event.key === "ArrowDown" && this.rowIndex < this.dinamicArray.length - 1 ){
             this.rowIndex ++;
+            this.score ++;
         } else if (event.key === "ArrowRight"  && this.columnIndex < this.dinamicArray[0].length - 1 ){
             this.columnIndex++;
+            this.score ++;
         } else if (event.key === "ArrowLeft"   && this.columnIndex > 0  ){
             this.columnIndex--;
+            this.score ++;
         }
         this.playerPosition = [this.rowIndex, this.columnIndex]
         this.dinamicArray[this.rowIndex][this.columnIndex] = 1
         //console.log("PLAYER POSITION: ", this.playerPosition);
+        this.scorePlayer.innerText = this.score
     }
     updateGame(){
         playerPosition[this.rowIndex][this.columnIndex] = 1
