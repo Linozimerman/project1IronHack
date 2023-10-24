@@ -3,7 +3,6 @@
 
 
 
-
 let g1 = new Game()
 let p1 = new Player () 
 let e1 = new Enemy ()
@@ -33,6 +32,9 @@ p1.dinamicArray.forEach((element, rowIndex) => {
             dinamicSelector.classList.remove("playerClass")
             dinamicSelector.classList.add("enemyClass")
             dinamicSelector.classList.remove("peopleClass")
+            if(innerElement === 2  && dinamicSelector.classList.contains("peopleClass")){
+                /*aca me gustaria que si es fuego y antes tenia la clase people baje una vida */
+            }
         } else if (innerElement === 3){
             dinamicSelector.classList.remove("nothingClass")
             dinamicSelector.classList.remove("playerClass")
@@ -50,7 +52,6 @@ p1.dinamicArray.forEach((element, rowIndex) => {
 function addEnemyAfterTime() {
 setTimeout(()=>{
 e1.addEnemy(p1.dinamicArray)
-console.log(pp1.enemyPosition);
 boardChecker();
 addEnemyAfterTime();
 }, 1000);
@@ -71,7 +72,7 @@ document.addEventListener("keydown", (event) => {
     console.log("key pressed:", event.key)
     p1.movePlayer(event);
     boardChecker()
-    
-    
 });
+
+
 
