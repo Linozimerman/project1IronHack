@@ -9,12 +9,18 @@ class Player {
         this.columnIndex = this.playerPosition[1];
         this.health = 100;
         this.cerocero = 0;
-        this.unocero = 0;
         this.cerouno = 0;
-        this.unouno = 1;
+        this.cerodos = 0;
+        this.unocero = 0;
+        this.unouno = 0;
+        this.unodos = 0;
+        this.doscero = 1;
+        this.dosuno = 0;
+        this.dosdos = 0;
         this.dinamicArray = [
-            [this.cerocero,this.cerouno],
-            [this.unocero,this.unouno]
+            [this.cerocero, this.cerouno, this.cerodos],
+            [this.unocero, this.unouno, this.unodos],
+            [this.doscero, this.dosuno, this.dosdos]
             ]
     }
 

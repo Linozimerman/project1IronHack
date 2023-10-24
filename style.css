@@ -19,22 +19,39 @@ body{
     grid-area: cerocero;
     width: 150px;
 }
-
 .item0-1{
     grid-area: cerouno;
     width: 150px;
 }
-
+.item0-2{
+    grid-area: cerodos;
+    width: 150px;
+}
 .item1-0{
     grid-area: unocero;
     width: 150px;
 }
-
 .item1-1{  
     grid-area: unouno;
     width: 150px;
 }
+.item1-2{  
+    grid-area: unodos;
+    width: 150px;
+}
 
+.item2-0{
+    grid-area: doscero;
+    width: 150px;
+}
+.item2-1{  
+    grid-area: dosuno;
+    width: 150px;
+}
+.item2-2{  
+    grid-area: dosdos;
+    width: 150px;
+}
 
 
 
@@ -42,22 +59,15 @@ body{
     background-color: #aba8a8;
     width: 80vw;
     height: 80vh;
-/*     display: flex;
-    justify-content: space-evenly;
-    align-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
- */
     display: grid;
     grid-template:
-    [row1-start] "cerocero cerouno" 150px [row1-end]
-    [row2-start] "unocero unouno" 150px [row2-end];
+    [row1-start] "cerocero cerouno cerodos" 150px [row1-end]
+    [row2-start] "unocero unouno unodos" 150px [row2-end]
+    [row3-start] "doscero dosuno dosdos" 150px [row3-end];  
     column-gap: 50px;
     row-gap: 50px;
     justify-items: center;
     justify-content: center; 
-
-
 
 }
 
