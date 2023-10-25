@@ -8,11 +8,36 @@
 body{
     background-color: #838383;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
+.hud{
+    display: flex;
+    justify-content: space-evenly;
+    justify-items: center;
+    align-content: space-evenly;
+    align-items: center;
+    background-color: rgb(252, 147, 120);
+    border-bottom: 100px solid #aba8a8;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    height: 10%;
+    width: 700px;
+}
 
+/* .movementCounterClass{
+
+}
+
+.scoreCounterClass{
+
+}
+
+.starsCounterClass{
+
+} */
 
 
 
@@ -155,7 +180,7 @@ body{
 #div-boardGame{
     background-color: #aba8a8;
     width: 700px;
-    height: 95vh;
+    height: 80vh;
     display: grid;
     grid-template:
     [row1-start] "cerocero cerouno cerodos cerotres cerocuatro" 150px [row1-end]
@@ -164,9 +189,11 @@ body{
     [row4-start] "trescero tresuno tresdos trestres trescuatro" 150px [row4-end]  
     [row5-start] "cuatrocero cuatrouno cuatrodos cuatrotres cuatrocuatro" 150px [row5-end];  
     column-gap: 40px;
-    row-gap: 40px;
+    row-gap: 10px;
+    justify-content: space-evenly;
     justify-items: center;
-    justify-content: center; 
+    align-content: space-evenly;
+    align-items: center;
 
 }
 
@@ -208,4 +235,21 @@ body{
 }
 
 
+.deadClass{
+    background-color: rgba(255, 255, 255, 0.244);
+    background-image: url('./img/skull.gif');
+    background-size: cover; 
+    background-position: center center;
+}
+
+.gameOverBanner{
+    /* background-image: url(./img/GameOver.gif); */ 
+    background-size: cover; 
+    background-position: center center;
+    position: absolute;
+    margin-top: 30px;
+    width: 90vw;
+    height: 80vh;
+    
+}
 

@@ -1,8 +1,9 @@
 const movementPlayer = document.querySelector("#movement")
-
+const scoreGame = document.querySelector("#score")
+const starsPlayer = document.querySelector("#stars")
 class Player {
     constructor (){
-        this.playerPosition = [2,2];
+        this.playerPosition = [4,4];
         this.rowIndex = this.playerPosition[0];
         this.columnIndex = this.playerPosition[1];
         this.movementPlayer = movement;
@@ -19,9 +20,6 @@ class Player {
     movePlayer(event){
         //console.log("are we here?");
         //console.log("ARRAY: ",this.dinamicArray);
-        
-        
-        
         this.dinamicArray[this.rowIndex][this.columnIndex] = 0
         if (event.key == "ArrowUp"  && this.rowIndex !== 0   ){
             this.rowIndex --;
@@ -40,6 +38,7 @@ class Player {
         this.playerPosition = [this.rowIndex, this.columnIndex]
         this.dinamicArray[this.rowIndex][this.columnIndex] = 1
         //console.log("PLAYER POSITION: ", this.playerPosition);
+        
         this.movementPlayer.innerText = this.movement
     }
     updateGame(){
@@ -51,13 +50,19 @@ class Player {
 class Game {
     constructor (){
     this.gameOver = false;
-    this.health = 100;
+    this.starsPlayer = stars;
+    this.stars = 25;
+    this.scoreGame = score;
     this.score = 0;
+
+    /* if(this.stars === 0){
+    this.gameOver = true;
+    }  */
     }
 }
 
 
- class Enemy {
+class Enemy {
     constructor (){
         this.enemyPosition = [0,0]
         this.enemyRowIndex = this.enemyPosition[0];
