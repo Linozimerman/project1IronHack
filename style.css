@@ -8,11 +8,32 @@
 body{
     background-color: #838383;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
+.hud{
+    display: flex;
+    background-color: rgb(252, 147, 120);
+    border-bottom: 100px solid #aba8a8;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    height: 10;
+    width: 700px;
+}
 
+.movementCounterClass{
+
+}
+
+.scoreCounterClass{
+
+}
+
+.starsCounterClass{
+
+}
 
 
 
@@ -156,6 +177,7 @@ body{
     background-color: #aba8a8;
     width: 700px;
     height: 95vh;
+    margin-top: 30px;
     display: grid;
     grid-template:
     [row1-start] "cerocero cerouno cerodos cerotres cerocuatro" 150px [row1-end]
@@ -165,8 +187,11 @@ body{
     [row5-start] "cuatrocero cuatrouno cuatrodos cuatrotres cuatrocuatro" 150px [row5-end];  
     column-gap: 40px;
     row-gap: 40px;
+    
+    justify-content: space-evenly;
     justify-items: center;
-    justify-content: center; 
+    align-content: space-evenly;
+    align-items: center;
 
 }
 
@@ -216,8 +241,13 @@ body{
 }
 
 .gameOverBanner{
-    background-image: url(./img/GameOver.gif);
+   /*  background-image: url(./img/GameOver.gif); */
     background-size: cover; 
     background-position: center center;
+    position: absolute;
+    margin-top: 30px;
+    width: 90vw;
+    height: 80vh;
+    
 }
 

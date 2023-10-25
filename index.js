@@ -108,8 +108,8 @@ let gameOverDisplayed = false;
 
 function gameOverBanner(){
     if (!gameOverDisplayed){
-        const gameOverImage = document.createElement("h1");
-        gameOverImage.innerText = "GAME OVER";
+        const gameOverImage = document.createElement("div");
+        gameOverImage.innerText = " ";
         boardElement.appendChild(gameOverImage);
         gameOverImage.classList.add("gameOverBanner");
         gameOverDisplayed = true;
