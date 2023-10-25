@@ -38,6 +38,7 @@ class Player {
         this.playerPosition = [this.rowIndex, this.columnIndex]
         this.dinamicArray[this.rowIndex][this.columnIndex] = 1
         //console.log("PLAYER POSITION: ", this.playerPosition);
+        
         this.movementPlayer.innerText = this.movement
     }
     updateGame(){

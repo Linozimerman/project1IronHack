@@ -17,7 +17,7 @@ function boardChecker(){
     if(g1.stars === 0){
         g1.gameOver = true;
         if(g1.gameOver === true){
-            gameOverBanner()    ///por que corre infinito?
+            gameOverBanner()    
             document.querySelectorAll(".playerClass, .peopleClass").forEach((div)=>{
                 if(div.classList.contains("playerClass")){
                     div.classList.add("deadClass")
@@ -92,18 +92,29 @@ addEnemyAfterTime();
 
 //ADD PEOPLE
 function addPeopleAfterTime() {
-    if(!g1.gameOver === true){
+    
         setTimeout(()=>{
         pp1.addPeople(p1.dinamicArray)
         //console.log(e1.enemyPosition);
         boardChecker();
         addPeopleAfterTime();
         }, 4000);
-    }
+    
 }
 addPeopleAfterTime();
 
-//GAME OVER BANNER
+/* function restartGame(){
+    g1 = new Game()
+    p1 = new Player () 
+    e1 = new Enemy ()
+    pp1 = new People ()
+
+    if(gameOverImage){
+        gameOverImage.remove()
+    }
+} */
+
+//GAME OVER BANNER AND RESTART
 let gameOverDisplayed = false;
 
 function gameOverBanner(){
@@ -113,11 +124,45 @@ function gameOverBanner(){
         boardElement.appendChild(gameOverImage);
         gameOverImage.classList.add("gameOverBanner");
         gameOverDisplayed = true;
-}
+        //create restart button
+        const restartButton = document.createElement("button");
+        restartButton.innerText = "Restart";
+        boardElement.appendChild(restartButton);
+        //restart button functionality 
+        
+
+        function restartGame(){
+        restartButton.addEventListener("click", () => {
+            //console.log("clicked")
+            document.querySelectorAll(".deadClass").forEach((div)=>{
+                if(div.classList.contains("deadClass")){
+                    div.classList.remove("deadClass")
+                    div.classList.add("nothingClass")
+                }
+            if(gameOverImage){  
+                gameOverImage.remove()
+                restartButton.remove()
+            }
+            g1.gameOver = false;
+            g1.scoreGame.innerText = g1.score;
+            g1.starsPlayer.innerText = g1.stars;
+            p1.movementPlayer.innerText = p1.movement;
+            
+            g1 = new Game();
+            p1 = new Player () ;
+            e1 = new Enemy ();
+            pp1 = new People ();
+            });
+            
+        });
+        }
+        restartGame()  ///me funciona solo la primera vez, como hago para que se llame a si misma?
+        
+    }
 
 }
 
-//Event listener
+//Event listener keys
 document.addEventListener("keydown", (event) => {
     console.log("key pressed:", event.key)
     p1.movePlayer(event);
