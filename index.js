@@ -157,7 +157,7 @@ function gameOverBanner(){
         });
         }
         restartGame()  ///me funciona solo la primera vez, como hago para que se llame a si misma?
-        
+
     }
 
 }
