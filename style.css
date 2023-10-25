@@ -208,4 +208,16 @@ body{
 }
 
 
+.deadClass{
+    background-color: rgba(255, 255, 255, 0.244);
+    background-image: url('./img/skull.gif');
+    background-size: cover; 
+    background-position: center center;
+}
+
+.gameOverBanner{
+    background-image: url(./img/GameOver.gif);
+    background-size: cover; 
+    background-position: center center;
+}
 

@@ -50,18 +50,18 @@ class Game {
     constructor (){
     this.gameOver = false;
     this.starsPlayer = stars;
-    this.stars = 100;
+    this.stars = 25;
     this.scoreGame = score;
     this.score = 0;
 
     /* if(this.stars === 0){
     this.gameOver = true;
-    } */
+    }  */
     }
 }
 
 
- class Enemy {
+class Enemy {
     constructor (){
         this.enemyPosition = [0,0]
         this.enemyRowIndex = this.enemyPosition[0];

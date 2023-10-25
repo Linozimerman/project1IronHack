@@ -1,5 +1,6 @@
-
-
+const boardElement = document.getElementById("div-boardGame");
+//const gameOverDivEndPlayer = document.querySelector(".playerClass");
+//const gameOverDivEndPeople = document.querySelector(".peopleClass");
 
 
 
@@ -9,29 +10,38 @@ let e1 = new Enemy ()
 let pp1 = new People ()
 
 
-function boardChecker(){
-p1.dinamicArray.forEach((element, rowIndex) => {
-    //console.log("First console","element:",element, "rowIndex:",rowIndex)
-    element.forEach((innerElement, columnIndex) =>{
-        //console.log("Second console innerElement:",innerElement, "columnIndex:", columnIndex)
-        const dinamicSelector = document.querySelector(`.item${rowIndex}\\-${columnIndex}`)
-        //console.log("Este es el dinamicSelector:", dinamicSelector);
 
-        //IF GAME OVER
-        if(g1.stars === 0){
-            g1.gameOver = true;
-            if(g1.gameOver = true){
-            //dinamicSelector.classList.remove("nothingClass")
-            dinamicSelector.classList.remove("playerClass")
-            //dinamicSelector.classList.remove("enemyClass")
-            dinamicSelector.classList.remove("peopleClass")
-            
+
+function boardChecker(){
+    //IF GAME OVER
+    if(g1.stars === 0){
+        g1.gameOver = true;
+        if(g1.gameOver === true){
+            gameOverBanner()    ///por que corre infinito?
+            document.querySelectorAll(".playerClass, .peopleClass").forEach((div)=>{
+                if(div.classList.contains("playerClass")){
+                    div.classList.add("deadClass")
+                }
+                if(div.classList.contains("peopleClass")){
+                    div.classList.add("deadClass")
+                }
+                div.classList.remove("playerClass");
+                div.classList.remove("peopleClass");
+            });
             return;
-            }
+            
         }
-        //CHECKS THE BOARD 
-        if(innerElement === 0){
-            dinamicSelector.classList.add("nothingClass")
+    } //hasta aca es GAME OVER
+    p1.dinamicArray.forEach((element, rowIndex) => {
+        //console.log("First console","element:",element, "rowIndex:",rowIndex)
+        element.forEach((innerElement, columnIndex) =>{
+            const dinamicSelector = document.querySelector(`.item${rowIndex}\\-${columnIndex}`)
+            //console.log("Second console innerElement:",innerElement, "columnIndex:", columnIndex)
+            //console.log("Este es el dinamicSelector:", dinamicSelector);
+            
+            //CHECKS THE BOARD 
+            if(innerElement === 0){
+                dinamicSelector.classList.add("nothingClass")
             dinamicSelector.classList.remove("playerClass");
             dinamicSelector.classList.remove("enemyClass");
             dinamicSelector.classList.remove("peopleClass");
@@ -65,16 +75,16 @@ p1.dinamicArray.forEach((element, rowIndex) => {
         
         
     });
-
-
+    
+    
 });
 }
 
 // ADD ENEMY
 function addEnemyAfterTime() {
-setTimeout(()=>{
-e1.addEnemy(p1.dinamicArray)
-boardChecker();
+    setTimeout(()=>{
+        e1.addEnemy(p1.dinamicArray)
+        boardChecker();
 addEnemyAfterTime();
 }, 1000);
 }
@@ -93,12 +103,27 @@ function addPeopleAfterTime() {
 }
 addPeopleAfterTime();
 
+//GAME OVER BANNER
+let gameOverDisplayed = false;
+
+function gameOverBanner(){
+    if (!gameOverDisplayed){
+        const gameOverImage = document.createElement("h1");
+        gameOverImage.innerText = "GAME OVER";
+        boardElement.appendChild(gameOverImage);
+        gameOverImage.classList.add("gameOverBanner");
+        gameOverDisplayed = true;
+}
+
+}
+
 //Event listener
 document.addEventListener("keydown", (event) => {
     console.log("key pressed:", event.key)
     p1.movePlayer(event);
     boardChecker()
 });
+
 
 
 
