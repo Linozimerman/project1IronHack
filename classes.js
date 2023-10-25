@@ -1,12 +1,12 @@
-const scorePlayer = document.querySelector("#score")
+const movementPlayer = document.querySelector("#movement")
 
 class Player {
     constructor (){
         this.playerPosition = [2,2];
         this.rowIndex = this.playerPosition[0];
         this.columnIndex = this.playerPosition[1];
-        this.scorePlayer = score;
-        this.score = 0;
+        this.movementPlayer = movement;
+        this.movement = 0;
         this.dinamicArray = [
             [0,0,0,0,0],
             [0,0,0,0,0],
@@ -25,22 +25,22 @@ class Player {
         this.dinamicArray[this.rowIndex][this.columnIndex] = 0
         if (event.key == "ArrowUp"  && this.rowIndex !== 0   ){
             this.rowIndex --;
-            this.score ++;
+            this.movement ++;
             //console.log("Row index: ", this.rowIndex);
         } else if (event.key === "ArrowDown" && this.rowIndex < this.dinamicArray.length - 1 ){
             this.rowIndex ++;
-            this.score ++;
+            this.movement ++;
         } else if (event.key === "ArrowRight"  && this.columnIndex < this.dinamicArray[0].length - 1 ){
             this.columnIndex++;
-            this.score ++;
+            this.movement ++;
         } else if (event.key === "ArrowLeft"   && this.columnIndex > 0  ){
             this.columnIndex--;
-            this.score ++;
+            this.movement ++;
         }
         this.playerPosition = [this.rowIndex, this.columnIndex]
         this.dinamicArray[this.rowIndex][this.columnIndex] = 1
         //console.log("PLAYER POSITION: ", this.playerPosition);
-        this.scorePlayer.innerText = this.score
+        this.movementPlayer.innerText = this.movement
     }
     updateGame(){
         playerPosition[this.rowIndex][this.columnIndex] = 1
