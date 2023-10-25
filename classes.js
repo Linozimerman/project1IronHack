@@ -1,5 +1,6 @@
 const movementPlayer = document.querySelector("#movement")
-
+const scoreGame = document.querySelector("#score")
+//const starsPlayer = document.querySelector("#stars")
 class Player {
     constructor (){
         this.playerPosition = [2,2];
@@ -52,6 +53,7 @@ class Game {
     constructor (){
     this.gameOver = false;
     this.health = 100;
+    this.scoreGame = score;
     this.score = 0;
     }
 }

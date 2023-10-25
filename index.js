@@ -21,6 +21,11 @@ p1.dinamicArray.forEach((element, rowIndex) => {
             dinamicSelector.classList.remove("enemyClass");
             dinamicSelector.classList.remove("peopleClass");
         } else if(innerElement === 1){
+            if(dinamicSelector.classList.contains("enemyClass")){
+                g1.score++;
+                g1.scoreGame.innerText = g1.score;
+                console.log(g1.score)
+            }
             dinamicSelector.classList.remove("nothingClass")
             dinamicSelector.classList.add("playerClass");
             dinamicSelector.classList.remove("enemyClass")
@@ -33,6 +38,7 @@ p1.dinamicArray.forEach((element, rowIndex) => {
             dinamicSelector.classList.add("enemyClass")
             dinamicSelector.classList.remove("peopleClass")
             if(innerElement === 2  && dinamicSelector.classList.contains("peopleClass")){
+                
                 /*aca me gustaria que si es fuego y antes tenia la clase people baje una vida */
             }
         } else if (innerElement === 3){
