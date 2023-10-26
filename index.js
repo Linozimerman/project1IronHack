@@ -226,6 +226,7 @@ function gameOverBanner(){
         //create restart button
         const restartButton = document.createElement("button");
         restartButton.innerText = "Restart";
+        restartButton.classList.add("restartButton")
         boardElement.appendChild(restartButton);
         //restart button functionality 
 

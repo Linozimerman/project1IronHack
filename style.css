@@ -29,7 +29,7 @@ body{
     align-content: space-evenly;
     align-items: center;
     background-color: #EBD2B5;
-    border-bottom: 100px solid #aba8a8;
+    border-bottom: 100px solid #343d39;
     border-left: 60px solid transparent;
     border-right: 60px solid transparent;
     height: 10%;
@@ -49,6 +49,8 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    
     
 }
 
@@ -57,12 +59,12 @@ body{
 } */
 
 .scoreCounterClass{
-    color: red;
+    color: #CC4B52;
     
 }
 
 .starCounterClass{
-    color: yellow;
+    color: #EFBE36;
 }
 
 
@@ -204,7 +206,7 @@ body{
 
 
 #div-boardGame{
-    background-color: #aba8a8;
+    background-color: #343d39;
     width: 700px;
     height: 80vh;
     display: grid;
@@ -230,6 +232,7 @@ body{
 
 
 .spacesWindows{
+    background-image: url('./img/off.png');
     background-color: aquamarine;
     border: solid, 4px, black ;
     border-radius: 5px;
@@ -288,8 +291,8 @@ body{
     background-position: center center;
     position: absolute;
     margin-top: 30px;
-    width: 90vw;
-    height: 80vh;
+    width: 70vw;
+    height: 70vh;
     
 }
 
@@ -297,14 +300,19 @@ body{
     display: none
 }
 
-/* .thunderBanner{
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
-} */
-/* .thunderBanner:hover{
-    background-image: url(./img/Lightning.gif); 
-    background-size: cover; 
-    background-position: center center;
-    position: absolute;
-    width: 400px;
-    height: 500px;
-} */
+.thunderBanner{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #CC4B52;
+    border-radius: 8px;
+    width: 50px;
+    height: 30px;
+} 
+
+.restartButton{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #CC4B52;
+    border-radius: 8px;
+    width: 50px;
+    height: 30px;
+}
+
