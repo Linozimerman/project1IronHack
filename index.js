@@ -1,7 +1,7 @@
 const boardElement = document.getElementById("div-boardGame");
 //const gameOverDivEndPlayer = document.querySelector(".playerClass");
 //const gameOverDivEndPeople = document.querySelector(".peopleClass");
-
+const startButtonElement = document.querySelector("#startButton")
 
 
 let g1 = new Game()
@@ -79,11 +79,9 @@ function boardChecker(){
     
 });
 }
-const audio = document.querySelector("#clin")
 // ADD ENEMY
-
+//const audio = document.querySelector("#clin")
 function addEnemyAfterTime() {
-
         if(g1.score <10 ){
             setTimeout(()=>{
                 e1.addEnemy(p1.dinamicArray)
@@ -108,10 +106,7 @@ function addEnemyAfterTime() {
                 boardChecker();
                 addEnemyAfterTime();
             }, 300);}
-
 }
-
-
 //Invoking enemy
 addEnemyAfterTime();
 
@@ -154,7 +149,7 @@ function gameOverBanner(){
         restartButton.innerText = "Restart";
         boardElement.appendChild(restartButton);
         //restart button functionality 
-        
+
 
         function restartGame(){
         restartButton.addEventListener("click", () => {
@@ -172,6 +167,7 @@ function gameOverBanner(){
             g1.scoreGame.innerText = g1.score;
             g1.starsPlayer.innerText = g1.stars;
             p1.movementPlayer.innerText = p1.movement;
+            gameOverDisplayed = false;
             
             g1 = new Game();
             p1 = new Player () ;
@@ -181,7 +177,7 @@ function gameOverBanner(){
             
         });
         }
-        restartGame()  ///me funciona solo la primera vez, como hago para que se llame a si misma?
+        restartGame() 
 
     }
 
