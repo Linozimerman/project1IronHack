@@ -25,19 +25,36 @@ body{
     border-right: 25px solid transparent;
     height: 10%;
     width: 700px;
+
 }
 
+.hiddenMove{
+    display: none;
+}
 /* .movementCounterClass{
+    color: red;
+} */
 
+.scoreDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.scoreH2{
+    
 }
 
 .scoreCounterClass{
-
+    color: red;
+    
 }
 
-.starsCounterClass{
-
-} */
+.starCounterClass{
+    color: yellow;
+}
 
 
 

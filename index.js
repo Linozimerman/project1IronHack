@@ -19,11 +19,14 @@ function boardChecker(){
         g1.gameOver = true;
         if(g1.gameOver === true){
             gameOverBanner()    
-            document.querySelectorAll(".playerClass, .peopleClass").forEach((div)=>{
+            document.querySelectorAll(".playerClass, .peopleClass, .vipClass").forEach((div)=>{
                 if(div.classList.contains("playerClass")){
                     div.classList.add("deadClass")
                 }
                 if(div.classList.contains("peopleClass")){
+                    div.classList.add("deadClass")
+                }
+                if(div.classList.contains("vipClass")){
                     div.classList.add("deadClass")
                 }
                 div.classList.remove("playerClass");
@@ -187,7 +190,7 @@ function gameOverBanner(){
             }
             g1.gameOver = false;
             g1.scoreGame.innerText = g1.score;
-            g1.starsPlayer.innerText = g1.stars;
+            g1.starsPlayer.innerText = 100;
             p1.movementPlayer.innerText = p1.movement;
             gameOverDisplayed = false;
             
