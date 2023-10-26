@@ -239,10 +239,10 @@ body{
 
 
 .playerClass{
-    background-color: blue;
-    /* background-image: url('./img/player2.gif');
+    /* background-color: blue; */
+    background-image: url('./img/playerpixel.png');
     background-size: cover; 
-    background-position: center center; */
+    background-position: center center; 
 }
 
 .enemyClass{

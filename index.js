@@ -165,25 +165,25 @@ function addEnemyAfterTime() {
                 e1.addEnemy(p1.dinamicArray)
                 boardChecker();
                 addEnemyAfterTime();
-            }, 1000);}
+            }, 985);}
         else if(g1.score<10){
             setTimeout(()=>{
                 e1.addEnemy(p1.dinamicArray)
                 boardChecker();
                 addEnemyAfterTime();
-            }, 700);}
+            }, 658);}
         else if(g1.score<25){
             setTimeout(()=>{
                 e1.addEnemy(p1.dinamicArray)
                 boardChecker();
                 addEnemyAfterTime();
-            }, 500);}
+            }, 546);}
         else{
             setTimeout(()=>{
                 e1.addEnemy(p1.dinamicArray)
                 boardChecker();
                 addEnemyAfterTime();
-            }, 100);}
+            }, 95);}
 }
 //addEnemyAfterTime();
 
@@ -195,7 +195,7 @@ function addPeopleAfterTime() {
         //console.log(e1.enemyPosition);
         boardChecker();
         addPeopleAfterTime();
-        }, 4000);
+        }, 3689);
     
 }
 //addPeopleAfterTime();
@@ -207,7 +207,7 @@ function addVipAfterTime() {
     //console.log(e1.enemyPosition);
     boardChecker();
     addVipAfterTime();
-    }, 12000);
+    }, 11568);
 }
 //addVipAfterTime();
 
