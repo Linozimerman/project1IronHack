@@ -8,6 +8,7 @@ let g1 = new Game()
 let p1 = new Player () 
 let e1 = new Enemy ()
 let pp1 = new People ()
+let vip1 = new Vip ();
 
 
 
@@ -45,16 +46,22 @@ function boardChecker(){
             dinamicSelector.classList.remove("playerClass");
             dinamicSelector.classList.remove("enemyClass");
             dinamicSelector.classList.remove("peopleClass");
+            dinamicSelector.classList.remove("vipClass")
         } else if(innerElement === 1){
             if(dinamicSelector.classList.contains("enemyClass")){
                 g1.score++;
                 g1.scoreGame.innerText = g1.score;
                 //console.log(g1.score)
             }
+            if(g1.stars < 100 && dinamicSelector.classList.contains("vipClass")){
+                g1.stars += 25;
+                g1.starsPlayer.innerText = g1.stars
+            }
             dinamicSelector.classList.remove("nothingClass")
             dinamicSelector.classList.add("playerClass");
             dinamicSelector.classList.remove("enemyClass")
             dinamicSelector.classList.remove("peopleClass")
+            dinamicSelector.classList.remove("vipClass")
             // p1.playerPosition = [rowIndex,columnIndex];
             //console.log('el jugador esta en',p1.playerPosition);
         } else if (innerElement === 2){
@@ -66,11 +73,19 @@ function boardChecker(){
             //dinamicSelector.classList.remove("playerClass")
             dinamicSelector.classList.add("enemyClass")
             dinamicSelector.classList.remove("peopleClass")
+            dinamicSelector.classList.remove("vipClass")
         } else if (innerElement === 3){
             dinamicSelector.classList.remove("nothingClass")
             //dinamicSelector.classList.remove("playerClass")
             dinamicSelector.classList.remove("enemyClass")
             dinamicSelector.classList.add("peopleClass")
+            dinamicSelector.classList.remove("vipClass")
+        }else if (innerElement === 4){
+            dinamicSelector.classList.remove("nothingClass")
+            //dinamicSelector.classList.remove("playerClass")
+            dinamicSelector.classList.remove("enemyClass")
+            dinamicSelector.classList.remove("peopleClass")
+            dinamicSelector.classList.add("vipClass")
         }
         
         
@@ -93,19 +108,19 @@ function addEnemyAfterTime() {
                 e1.addEnemy(p1.dinamicArray)
                 boardChecker();
                 addEnemyAfterTime();
-            }, 900);}
+            }, 700);}
         else if(g1.score<25){
             setTimeout(()=>{
                 e1.addEnemy(p1.dinamicArray)
                 boardChecker();
                 addEnemyAfterTime();
-            }, 700);}
+            }, 500);}
         else{
             setTimeout(()=>{
                 e1.addEnemy(p1.dinamicArray)
                 boardChecker();
                 addEnemyAfterTime();
-            }, 300);}
+            }, 100);}
 }
 //Invoking enemy
 addEnemyAfterTime();
@@ -123,16 +138,18 @@ function addPeopleAfterTime() {
 }
 addPeopleAfterTime();
 
-/* function restartGame(){
-    g1 = new Game()
-    p1 = new Player () 
-    e1 = new Enemy ()
-    pp1 = new People ()
+// ADD VIP
+function addVipAfterTime() {
+    setTimeout(()=>{
+    vip1.addVip(p1.dinamicArray)
+    //console.log(e1.enemyPosition);
+    boardChecker();
+    addVipAfterTime();
+    }, 12000);
+}
+addVipAfterTime();
 
-    if(gameOverImage){
-        gameOverImage.remove()
-    }
-} */
+
 
 //GAME OVER BANNER AND RESTART
 let gameOverDisplayed = false;
@@ -169,10 +186,11 @@ function gameOverBanner(){
             p1.movementPlayer.innerText = p1.movement;
             gameOverDisplayed = false;
             
-            g1 = new Game();
+            g1 = new Game ();
             p1 = new Player () ;
             e1 = new Enemy ();
             pp1 = new People ();
+            vip1 = new Vip ();
             });
             
         });

@@ -51,7 +51,7 @@ class Game {
     constructor (){
     this.gameOver = false;
     this.starsPlayer = stars;
-    this.stars = 25;
+    this.stars = 100;
     this.scoreGame = score;
     this.score = 0;
 
@@ -99,6 +99,27 @@ class People {
     addPeople(dinamicArray){
         this.randomPosition();
         dinamicArray[this.peopleRowIndex][this.peopleColumnIndex] = 3
+        
+    }
+
+} 
+
+class Vip {
+    constructor (){ 
+        this.peoplePosition = [0,0]
+        this.peopleRowIndex = this.peoplePosition[0];
+        this.peopleColumnIndex = this.peoplePosition[1];
+        
+    }
+    randomPosition(){
+        this.peoplePosition[0] = Math.floor(Math.random() * 5);
+        this.peoplePosition[1] = Math.floor(Math.random() * 5);
+        this.peopleRowIndex = this.peoplePosition[0];
+        this.peopleColumnIndex = this.peoplePosition[1];
+    }
+    addVip(dinamicArray){
+        this.randomPosition();
+        dinamicArray[this.peopleRowIndex][this.peopleColumnIndex] = 4
         
     }
 
