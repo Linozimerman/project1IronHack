@@ -245,7 +245,7 @@ body{
 
 .peopleClass{
     background-color: rgb(143, 42, 42);
-    background-image: url('./img/FireVictim2.gif');
+    background-image: url('./img/fireVictim2.gif');
     background-size: cover; 
     background-position: center center;
 }
