@@ -79,15 +79,40 @@ function boardChecker(){
     
 });
 }
-
+const audio = document.querySelector("#clin")
 // ADD ENEMY
+
 function addEnemyAfterTime() {
-    setTimeout(()=>{
-        e1.addEnemy(p1.dinamicArray)
-        boardChecker();
-addEnemyAfterTime();
-}, 1000);
+
+        if(g1.score <10 ){
+            setTimeout(()=>{
+                e1.addEnemy(p1.dinamicArray)
+                boardChecker();
+                addEnemyAfterTime();
+            }, 1000);}
+        else if(g1.score<10){
+            setTimeout(()=>{
+                e1.addEnemy(p1.dinamicArray)
+                boardChecker();
+                addEnemyAfterTime();
+            }, 900);}
+        else if(g1.score<25){
+            setTimeout(()=>{
+                e1.addEnemy(p1.dinamicArray)
+                boardChecker();
+                addEnemyAfterTime();
+            }, 700);}
+        else{
+            setTimeout(()=>{
+                e1.addEnemy(p1.dinamicArray)
+                boardChecker();
+                addEnemyAfterTime();
+            }, 300);}
+
 }
+
+
+//Invoking enemy
 addEnemyAfterTime();
 
 //ADD PEOPLE
