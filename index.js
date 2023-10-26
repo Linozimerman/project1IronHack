@@ -16,8 +16,9 @@ function preinicio(){
     //create restart button
     const startButton = document.createElement("button");
     startButton.innerText = "start";
-    boardElement.appendChild(startButton);
+    startButton.classList.add("thunderBanner")
     
+    boardElement.appendChild(startButton);
     
     function lightsOnOff(){
         spacesWindowsElement.forEach((div)=>{

@@ -289,14 +289,13 @@ body{
 }
 
 .thunderBanner{
-    display:none;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
 .thunderBanner:hover{
     background-image: url(./img/Lightning.gif); 
     background-size: cover; 
     background-position: center center;
     position: absolute;
-    margin-top: 30px;
-    width: 90vw;
-    height: 80vh;
+    width: 700px;
+    height: 700px;
 }
