@@ -28,6 +28,7 @@ function boardChecker(){
                 }
                 div.classList.remove("playerClass");
                 div.classList.remove("peopleClass");
+                div.classList.remove("vipClass");
             });
             return;
             
@@ -66,6 +67,10 @@ function boardChecker(){
             //console.log('el jugador esta en',p1.playerPosition);
         } else if (innerElement === 2){
             if(g1.gameOver === false && dinamicSelector.classList.contains("peopleClass")){
+                g1.stars -= 25;
+                g1.starsPlayer.innerText = g1.stars
+            }
+            if(g1.gameOver === false && dinamicSelector.classList.contains("vipClass")){
                 g1.stars -= 25;
                 g1.starsPlayer.innerText = g1.stars
             }
