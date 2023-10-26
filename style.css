@@ -1,4 +1,13 @@
 
+/* color code
+#EEBD42 #EFBE36 
+#CC4B52   #F2686A// remera: #F56767
+#946054
+#EBD2B5 #EBD2B4
+#06141C
+
+ */
+
 *{
     padding: 0px;
     margin: 0px;
@@ -258,11 +267,11 @@ body{
 }
 
 .nothingClass{
-    background-color: black;
+    background-image: url('./img/off.png');
 }
 
 .lightOnClass{
-    background-color: white;
+    background-image: url('./img/on.png');
 }
 
 
@@ -288,14 +297,14 @@ body{
     display: none
 }
 
-.thunderBanner{
+/* .thunderBanner{
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
-}
-.thunderBanner:hover{
+} */
+/* .thunderBanner:hover{
     background-image: url(./img/Lightning.gif); 
     background-size: cover; 
     background-position: center center;
     position: absolute;
-    width: 700px;
-    height: 700px;
-}
+    width: 400px;
+    height: 500px;
+} */

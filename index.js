@@ -17,7 +17,6 @@ function preinicio(){
     const startButton = document.createElement("button");
     startButton.innerText = "start";
     startButton.classList.add("thunderBanner")
-    
     boardElement.appendChild(startButton);
     
     function lightsOnOff(){
@@ -48,7 +47,7 @@ function preinicio(){
                 div.classList.add("nothingClass")
             }
         });    
-        //show gif only if you hover over START
+        //show thunder gif
         const thunderImage = document.createElement("div");
         thunderImage.innerText = " ";
         //boardElement.appendChild(thunderImage);
