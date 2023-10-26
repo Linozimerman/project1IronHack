@@ -15,7 +15,7 @@
 }
 
 body{
-    background-color: #838383;
+    background-color: #EBD2B5;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -28,10 +28,10 @@ body{
     justify-items: center;
     align-content: space-evenly;
     align-items: center;
-    background-color: rgb(252, 147, 120);
+    background-color: #EBD2B5;
     border-bottom: 100px solid #aba8a8;
-    border-left: 25px solid transparent;
-    border-right: 25px solid transparent;
+    border-left: 60px solid transparent;
+    border-right: 60px solid transparent;
     height: 10%;
     width: 700px;
 
