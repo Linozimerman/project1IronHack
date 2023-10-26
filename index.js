@@ -1,8 +1,8 @@
-const boardElement = document.getElementById("div-boardGame");
+const boardElement = document.getElementById("div-boardGame"); //NO BORRAR NI COMENTAR esta en uso en gameOverBanner
 //const gameOverDivEndPlayer = document.querySelector(".playerClass");
 //const gameOverDivEndPeople = document.querySelector(".peopleClass");
-const startButtonElement = document.querySelector("#startButton")
-
+//const startButtonElement = document.querySelector("#startButton")
+const spacesWindowsElement = document.querySelectorAll(".spacesWindows")
 
 let g1 = new Game()
 let p1 = new Player () 
@@ -11,17 +11,72 @@ let pp1 = new People ()
 let vip1 = new Vip ();
 
 
+//Que lo llame el boton de reinicio
+function preinicio(){
+    //create restart button
+    const startButton = document.createElement("button");
+    startButton.innerText = "start";
+    boardElement.appendChild(startButton);
+    
+    
+    function lightsOnOff(){
+        spacesWindowsElement.forEach((div)=>{
+            const randomState = Math.random() < 0.5 //esto genera true or false randomly
+            if(randomState){
+                div.classList.add("lightOnClass")
+                div.classList.remove("nothingClass")
+            } else {
+                div.classList.remove("lightOnClass")
+                div.classList.add("nothingClass")
+                }
+        });
+    }
+    const lucesluces = setInterval(lightsOnOff,1000);
 
 
-function boardChecker(){
-    //IF GAME OVER
-    if(g1.stars === 0){
-        g1.gameOver = true;
-        if(g1.gameOver === true){
-            gameOverBanner()    
-            document.querySelectorAll(".playerClass, .peopleClass, .vipClass").forEach((div)=>{
-                if(div.classList.contains("playerClass")){
-                    div.classList.add("deadClass")
+    startButton.addEventListener("click", () => {
+        console.log("clicked start")
+        //Remove button
+        
+        //parar el juego de luces
+        clearInterval(lucesluces)
+        //borrar todas las luces a classNothing
+        document.querySelectorAll(".lightOnClass").forEach((div)=>{
+            if(div.classList.contains("lightOnClass")){
+                div.classList.remove("lightOnClass")
+                div.classList.add("nothingClass")
+            }
+        });    
+        //show gif only if you hover over START
+        const thunderImage = document.createElement("div");
+        thunderImage.innerText = " ";
+        //boardElement.appendChild(thunderImage);
+        //thunderImage.classList.add("thunderBanner");
+        addEnemyAfterTime();
+        addPeopleAfterTime();
+        addVipAfterTime()
+        //boardChecker()
+        //gameOverBanner()
+        startButton.classList.add("hiddenStuff");
+    });
+}    
+
+preinicio()
+    
+    
+    
+    
+    
+    
+    function boardChecker(){
+        //IF GAME OVER
+        if(g1.stars === 0){
+            g1.gameOver = true;
+            if(g1.gameOver === true){
+                gameOverBanner()    
+                document.querySelectorAll(".playerClass, .peopleClass, .vipClass").forEach((div)=>{
+                    if(div.classList.contains("playerClass")){
+                        div.classList.add("deadClass")
                 }
                 if(div.classList.contains("peopleClass")){
                     div.classList.add("deadClass")
@@ -130,8 +185,7 @@ function addEnemyAfterTime() {
                 addEnemyAfterTime();
             }, 100);}
 }
-//Invoking enemy
-addEnemyAfterTime();
+//addEnemyAfterTime();
 
 //ADD PEOPLE
 function addPeopleAfterTime() {
@@ -144,7 +198,7 @@ function addPeopleAfterTime() {
         }, 4000);
     
 }
-addPeopleAfterTime();
+//addPeopleAfterTime();
 
 // ADD VIP
 function addVipAfterTime() {
@@ -155,7 +209,7 @@ function addVipAfterTime() {
     addVipAfterTime();
     }, 12000);
 }
-addVipAfterTime();
+//addVipAfterTime();
 
 
 
@@ -198,18 +252,19 @@ function gameOverBanner(){
             p1 = new Player () ;
             e1 = new Enemy ();
             pp1 = new People ();
-            vip1 = new Vip ();
+            vip1 = new Vip (); 
             });
             
         });
         }
         restartGame() 
+        //preinicio()
 
     }
 
 }
 
-//Event listener keys
+//Event listener keys gameplay
 document.addEventListener("keydown", (event) => {
     console.log("key pressed:", event.key)
     p1.movePlayer(event);

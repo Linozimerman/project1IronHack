@@ -261,6 +261,10 @@ body{
     background-color: black;
 }
 
+.lightOnClass{
+    background-color: white;
+}
+
 
 .deadClass{
     background-color: rgba(255, 255, 255, 0.244);
@@ -270,7 +274,7 @@ body{
 }
 
 .gameOverBanner{
-    /* background-image: url(./img/GameOver.gif); */ 
+    background-image: url(./img/GameOver.gif); 
     background-size: cover; 
     background-position: center center;
     position: absolute;
@@ -280,3 +284,19 @@ body{
     
 }
 
+.hiddenStuff{
+    display: none
+}
+
+.thunderBanner{
+    display:none;
+}
+.thunderBanner:hover{
+    background-image: url(./img/Lightning.gif); 
+    background-size: cover; 
+    background-position: center center;
+    position: absolute;
+    margin-top: 30px;
+    width: 90vw;
+    height: 80vh;
+}
