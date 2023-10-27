@@ -7,7 +7,9 @@ Extinguish all the fire outbreaks and save everyone!
 
 
 ## My project idea
-![Screenshot](https://excalidraw.com/#json=UPPDbEzzUAwD-Ahf2uOXM,oW28XWpvn-rarhSD1SxqzA)
+
+![image](https://github.com/Linozimerman/project1IronHack/assets/31054244/aa725f87-bcce-4dcd-8361-a57cd9d1358c)
+
 
 
 The idea is to create a game. In the game the user will be a player that hops from balcony to balcony, saving people and extinguishing fire.
