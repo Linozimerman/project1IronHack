@@ -52,3 +52,21 @@ saving a Vip is lives++ .
 
 ## Presentation
 https://firefighterhero.my.canva.site/
+
+## Demo
+https://linozimerman.github.io/project1IronHack/
+
+
+## Color Reference
+
+| Color             | Hex                                                                |
+| ----------------- | ------------------------------------------------------------------ |
+| Example Color | ![#EEBD42](https://via.placeholder.com/10/0a192f?text=+) #EEBD42 |
+| Example Color | ![#EFBE36](https://via.placeholder.com/10/f8f8f8?text=+) #EFBE36 |
+| Example Color | ![#CC4B52](https://via.placeholder.com/10/00b48a?text=+) #CC4B52 |
+| Example Color | ![#F2686A](https://via.placeholder.com/10/00b48a?text=+) #F2686A |
+| Example Color | ![#F56767](https://via.placeholder.com/10/0a192f?text=+) #F56767 |
+| Example Color | ![#946054](https://via.placeholder.com/10/f8f8f8?text=+) #946054 |
+| Example Color | ![#EBD2B5](https://via.placeholder.com/10/00b48a?text=+) #EBD2B5 |
+| Example Color | ![#EBD2B4](https://via.placeholder.com/10/00b48a?text=+) #EBD2B4 |
+| Example Color | ![#06141C](https://via.placeholder.com/10/00b48a?text=+) #06141C |
