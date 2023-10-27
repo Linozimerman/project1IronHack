@@ -54,10 +54,6 @@ class Game {
     this.stars = 100;
     this.scoreGame = score;
     this.score = 0;
-
-    /* if(this.stars === 0){
-    this.gameOver = true;
-    }  */
     }
 }
 

@@ -40,23 +40,13 @@ body{
 .hiddenMove{
     display: none;
 }
-/* .movementCounterClass{
-    color: red;
-} */
 
 .scoreDiv{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    
-    
 }
-
-/* .scoreH2{
-    
-} */
 
 .scoreCounterClass{
     color: #CC4B52;
@@ -226,23 +216,15 @@ body{
 }
 
 
-
-
-
-
-
 .spacesWindows{
     background-image: url('./img/off.png');
     background-color: aquamarine;
     border: solid, 4px, black ;
     border-radius: 5px;
-/*     width: 100px;
-    height: 100px; */
 }
 
 
 .playerClass{
-    /* background-color: blue; */
     background-image: url('./img/playerpixel.png');
     background-size: cover; 
     background-position: center center; 

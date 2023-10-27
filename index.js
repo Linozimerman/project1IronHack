@@ -1,7 +1,4 @@
-const boardElement = document.getElementById("div-boardGame"); //NO BORRAR NI COMENTAR esta en uso en gameOverBanner
-//const gameOverDivEndPlayer = document.querySelector(".playerClass");
-//const gameOverDivEndPeople = document.querySelector(".peopleClass");
-//const startButtonElement = document.querySelector("#startButton")
+const boardElement = document.getElementById("div-boardGame"); 
 const spacesWindowsElement = document.querySelectorAll(".spacesWindows")
 
 let g1 = new Game()
@@ -11,7 +8,7 @@ let pp1 = new People ()
 let vip1 = new Vip ();
 
 
-//Que lo llame el boton de reinicio
+
 function preinicio(){
     //create restart button
     const startButton = document.createElement("button");
@@ -158,7 +155,6 @@ preinicio()
 });
 }
 // ADD ENEMY
-//const audio = document.querySelector("#clin")
 function addEnemyAfterTime() {
         if(g1.score <10 ){
             setTimeout(()=>{
