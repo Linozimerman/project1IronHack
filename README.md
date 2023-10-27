@@ -7,7 +7,7 @@ Extinguish all the fire outbreaks and save everyone!
 
 
 ## My project idea
-![Screenshot]: (https://excalidraw.com/#json=UPPDbEzzUAwD-Ahf2uOXM,oW28XWpvn-rarhSD1SxqzA)
+![Screenshot](https://excalidraw.com/#json=UPPDbEzzUAwD-Ahf2uOXM,oW28XWpvn-rarhSD1SxqzA)
 
 
 The idea is to create a game. In the game the user will be a player that hops from balcony to balcony, saving people and extinguishing fire.
@@ -32,7 +32,7 @@ Id like to add more difficulty when x time passes. Change the backround to night
 
 
 ## Final Description "Firefighter Hero: Thunderstrike Rescue".
-As a final product the game is called "Firefighter Hero: Thunderstrike Rescue".
+As a final product the game is called *"Firefighter Hero: Thunderstrike Rescue"*.
 First we have the intro screen, where the lights of the building turn on and off in a rhitmic way.
 When you are ready, press START and let the disaster beggin.
 Your mission is clear: extinguish the flames, save the trapped people, and ensure their safety. However, lose more than four inocent people's lives, and it's game over. 
