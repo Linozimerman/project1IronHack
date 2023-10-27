@@ -51,7 +51,7 @@ saving a Vip is lives++ .
 
 
 ## Presentation
-https://firefighterhero.my.canva.site/
+[https://firefighterhero.my.canva.site/](https://firefighterhero.my.canva.site/firefighter-hero)
 
 ## Demo
 https://linozimerman.github.io/project1IronHack/
